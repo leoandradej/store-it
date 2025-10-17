@@ -1,8 +1,8 @@
 export default function Home() {
   return (
-    <div>
-      <h1 className="text-3xl">
-        StoreIt = The Only Storage Solution You Need.
+    <div className="flex-center h-screen">
+      <h1 className="text-3xl text-brand font-bold">
+        StoreIt - The Only Storage Solution You Need.
       </h1>
     </div>
   );
