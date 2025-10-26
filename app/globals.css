@@ -373,7 +373,7 @@
     @apply font-medium! text-brand-100!;
   }
   .modal-cancel-button {
-    @apply h-[52px]! flex-1! rounded-full! bg-white! text-light-100! hover:bg-transparent!;
+    @apply h-[52px]! flex-1! rounded-full! bg-white! text-light-100! shadow-lg hover:bg-gray-400! cursor-pointer transition-all duration-300;
   }
   .modal-submit-button {
     @apply primary-btn! mx-0! h-[52px]! w-full! flex-1!;
