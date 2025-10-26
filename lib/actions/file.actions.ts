@@ -3,10 +3,11 @@
 import { InputFile } from "node-appwrite/file";
 import { createAdminClient } from "../appwrite";
 import { appwriteConfig } from "../appwrite/config";
-import { ID, Models, Query } from "node-appwrite";
+import { ID, Query } from "node-appwrite";
 import { constructFileUrl, getFileType, parseStringify } from "../utils";
 import { revalidatePath } from "next/cache";
 import { getCurrentUser } from "./user.actions";
+import { UploadFileProps, UserRow } from "@/types";
 
 const handleError = (error: unknown, message: string) => {
   console.log(error, message);
@@ -64,12 +65,13 @@ export const uploadFile = async ({
   }
 };
 
-const createQueries = (currentUser: Models.User) => {
+const createQueries = (currentUser: UserRow) => {
   const queries = [
     Query.or([
       Query.equal("owner", [currentUser.$id]),
       Query.contains("users", [currentUser.email]),
     ]),
+    Query.select(["*", "owner.*"]),
   ];
 
   return queries;
