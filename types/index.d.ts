@@ -71,11 +71,11 @@ declare interface ThumbnailProps {
   imageClassName?: string;
 }
 
-declare interface ShareInputProps {
-  file: Models.Document;
-  onInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  onRemove: (email: string) => void;
-}
+// declare interface ShareInputProps {
+//   file: FileRow;
+//   onInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+//   onRemove: (email: string) => void;
+// }
 
 declare interface UserRow extends Models.Row {
   fullName: string;
@@ -95,4 +95,10 @@ declare interface FileRow extends Models.Row {
   extension?: string;
   size?: number;
   users?: string[];
+}
+
+declare interface ShareInputProps {
+  file: FileRow;
+  onInputChange: React.Dispatch<React.SetStateAction<string[]>>;
+  onRemove: (email: string) => void;
 }
