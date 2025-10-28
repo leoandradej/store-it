@@ -92,7 +92,7 @@ declare interface FileRow extends Models.Row {
   bucketFileId: string;
   accountId: string;
   owner: UserRow;
-  extension?: string;
+  extension: string;
   size?: number;
   users?: string[];
 }
