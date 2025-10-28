@@ -1,3 +1,4 @@
+import { FileType, TotalSpace } from "@/types";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -185,7 +186,7 @@ export const constructDownloadUrl = (bucketFileId: string) => {
 };
 
 // DASHBOARD UTILS
-export const getUsageSummary = (totalSpace: any) => {
+export const getUsageSummary = (totalSpace: TotalSpace) => {
   return [
     {
       title: "Documents",

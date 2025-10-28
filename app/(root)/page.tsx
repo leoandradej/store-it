@@ -3,7 +3,7 @@ import Chart from "@/components/Chart";
 import FormattedDateTime from "@/components/FormattedDateTime";
 import Thumbnail from "@/components/Thumbnail";
 import { Separator } from "@/components/ui/separator";
-import { getFiles, getTotalSpaceUSed } from "@/lib/actions/file.actions";
+import { getFiles, getTotalSpaceUsed } from "@/lib/actions/file.actions";
 import { convertFileSize, getUsageSummary } from "@/lib/utils";
 import { FileRow } from "@/types";
 import Image from "next/image";
@@ -13,7 +13,7 @@ const Dashboard = async () => {
   //Parallel Requests
   const [files, totalSpace] = await Promise.all([
     getFiles({ types: [], limit: 10 }),
-    getTotalSpaceUSed(),
+    getTotalSpaceUsed(),
   ]);
 
   //Get Usage Summary

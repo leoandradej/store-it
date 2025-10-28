@@ -210,7 +210,7 @@ export const deleteFile = async ({
 
 // TOTAL FILE SPACE USED
 
-export const getTotalSpaceUSed = async () => {
+export const getTotalSpaceUsed = async () => {
   try {
     const { databases } = await createSessionClient();
     const currentUser = await getCurrentUser();
