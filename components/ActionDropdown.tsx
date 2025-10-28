@@ -59,7 +59,7 @@ const ActionDropdown = ({ file }: { file: FileRow }) => {
         renameFile({
           fileId: file.$id,
           name,
-          extension: file.extension as string,
+          extension: file.extension,
           path,
         }),
       share: () => updateFileUsers({ fileId: file.$id, emails, path }),
