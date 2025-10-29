@@ -31,7 +31,13 @@ import {
 import { usePathname } from "next/navigation";
 import { FileDetails, ShareInput } from "./ActionsModalContent";
 
-const ActionDropdown = ({ file }: { file: FileRow }) => {
+const ActionDropdown = ({
+  userId,
+  file,
+}: {
+  userId: string;
+  file: FileRow;
+}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [action, setAction] = useState<ActionType | null>(null);
@@ -108,6 +114,7 @@ const ActionDropdown = ({ file }: { file: FileRow }) => {
           {value === "details" && <FileDetails file={file} />}
           {value === "share" && (
             <ShareInput
+              userId={userId}
               file={file}
               onInputChange={setEmails}
               onRemove={handleRemoveUser}

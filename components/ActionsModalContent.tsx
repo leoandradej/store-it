@@ -38,6 +38,7 @@ export const FileDetails = ({ file }: { file: FileRow }) => {
 };
 
 export const ShareInput = ({
+  userId,
   file,
   onInputChange,
   onRemove,
@@ -71,18 +72,20 @@ export const ShareInput = ({
                 className="flex items-center justify-between gap-2"
               >
                 <p className="subtitle-2">{email}</p>
-                <Button
-                  onClick={() => onRemove(email)}
-                  className="share-remove-user"
-                >
-                  <Image
-                    src="/assets/icons/remove.svg"
-                    alt="Remove"
-                    width={24}
-                    height={24}
-                    className="remove-icon"
-                  />
-                </Button>
+                {userId === file.owner.$id && (
+                  <Button
+                    onClick={() => onRemove(email)}
+                    className="share-remove-user"
+                  >
+                    <Image
+                      src="/assets/icons/remove.svg"
+                      alt="Remove"
+                      width={24}
+                      height={24}
+                      className="remove-icon"
+                    />
+                  </Button>
+                )}
               </li>
             ))}
           </ul>

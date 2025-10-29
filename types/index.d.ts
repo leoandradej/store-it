@@ -92,6 +92,7 @@ declare interface FileRow extends Models.Row {
 }
 
 declare interface ShareInputProps {
+  userId: string;
   file: FileRow;
   onInputChange: React.Dispatch<React.SetStateAction<string[]>>;
   onRemove: (email: string) => void;

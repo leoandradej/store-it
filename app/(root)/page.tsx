@@ -4,12 +4,15 @@ import FormattedDateTime from "@/components/FormattedDateTime";
 import Thumbnail from "@/components/Thumbnail";
 import { Separator } from "@/components/ui/separator";
 import { getFiles, getTotalSpaceUsed } from "@/lib/actions/file.actions";
+import { getCurrentUser } from "@/lib/actions/user.actions";
 import { convertFileSize, getUsageSummary } from "@/lib/utils";
 import { FileRow } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 
 const Dashboard = async () => {
+  const currentUser = await getCurrentUser();
+
   //Parallel Requests
   const [files, totalSpace] = await Promise.all([
     getFiles({ types: [], limit: 10 }),
@@ -84,7 +87,7 @@ const Dashboard = async () => {
                       className="caption"
                     />
                   </div>
-                  <ActionDropdown file={file} />
+                  <ActionDropdown userId={currentUser.$id} file={file} />
                 </div>
               </Link>
             ))}
