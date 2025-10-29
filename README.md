@@ -1,36 +1,152 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# StoreIt
 
-## Getting Started
+**StoreIt** is a modern file storage and sharing web app built with **Next.js**, **TypeScript**, and **Appwrite**.  
+It allows users to securely **upload**, **manage**, and **share files** through a simple, elegant, and responsive interface.
 
-First, run the development server:
+[🌐 Live Demo](store-it-git-main-leoandradejs-projects.vercel.app)  
+[👨🏻‍💻 Author](https://github.com/leoandradej)
+
+![StoreIt Preview](public/preview.png)
+
+---
+
+## 🚀 Features
+
+- 🔐 **Authentication** – Secure login and sign-up with Appwrite Auth
+- ☁️ **File Uploads** – Store and manage any file type with progress tracking
+- 🗃️ **File Management** – Rename, delete, and download files effortlessly
+- 🔗 **File Sharing** – Generate public or private share links
+- 📊 **Storage Insights** – View usage stats and recent activity
+- 🧭 **Global Search** – Quickly find files by name or date
+- 📱 **Responsive UI** – Optimized for desktop and mobile
+- 🧩 **Modern Stack** – Built with the latest Next.js App Router
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer                    | Technology                     |
+| ------------------------ | ------------------------------ |
+| **Frontend**             | Next.js 15+, React, TypeScript |
+| **Backend / Storage**    | Appwrite SDK                   |
+| **Styling**              | Tailwind CSS + Shadcn/UI       |
+| **Icons**                | Lucide React                   |
+| **Linting / Formatting** | ESLint, Prettier               |
+| **Deployment**           | Vercel (recommended)           |
+
+---
+
+## 📁 Project Structure
+
+```
+store-it/
+├─ app/ # Next.js App Router pages and layouts
+├─ components/ # Reusable UI components
+├─ constants/ # Constant values and enums
+├─ lib/ # Utility functions and helpers
+├─ public/ # Static assets
+├─ types/ # TypeScript type definitions
+├─ .env.example # Environment variable template
+├─ next.config.ts # Next.js configuration
+├─ tsconfig.json # TypeScript configuration
+└─ README.md
+```
+
+---
+
+## ⚙️ Getting Started
+
+### 1️⃣ Prerequisites
+
+Ensure you have:
+
+- **Node.js 18+**
+- **npm**, **yarn**, or **pnpm**
+- An **Appwrite** project with:
+  - Database
+  - Storage bucket
+  - API keys
+
+---
+
+### 2️⃣ Clone & Install
+
+```bash
+git clone https://github.com/leoandradej/store-it.git
+cd store-it
+npm install
+```
+
+---
+
+### 3️⃣ Environment Variables
+
+Create a `.env.local` file in the root:
+
+```env
+NEXT_PUBLIC_APPWRITE_ENDPOINT=https://cloud.appwrite.io/v1
+NEXT_PUBLIC_APPWRITE_PROJECT=your_project_id
+NEXT_PUBLIC_APPWRITE_BUCKET=your_bucket_id
+NEXT_PUBLIC_APPWRITE_DATABASE=your_database_id
+NEXT_PUBLIC_APPWRITE_KEY=your_api_key
+```
+
+---
+
+### 4️⃣ Run Locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧱 Deployment
 
-## Learn More
+You can deploy Store It easily with Vercel:
 
-To learn more about Next.js, take a look at the following resources:
+1. Push your code to GitHub
+2. Import the repo in Vercel
+3. Add all .env variables in the project settings
+4. Deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+(Alternatively, you can self-host with Appwrite Cloud and any Node server.)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🤝 Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contributions are always welcome!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Fork the repo
+2. Create your branch: git checkout -b feature/my-feature
+3. Commit changes: git commit -m "Add feature"
+4. Push to branch: git push origin feature/my-feature
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** — feel free to use and modify.
+
+---
+
+## Acknowledgments
+
+- Based on the StoreIt concept by [JavaScript Mastery](https://github.com/adrianhajdin/storage_management_solution)
+- Built and improved by [Leonardo Andrade](https://github.com/leoandradej)
+- Components by [shadcn/ui](https://ui.shadcn.com)
+
+---
+
+## Shields (Badges)
+
+[![Next.js](https://img.shields.io/badge/Next.js-000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Appwrite](https://img.shields.io/badge/Appwrite-F02E65?style=for-the-badge&logo=appwrite&logoColor=white)](https://appwrite.io/)
+[![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](./LICENSE)
