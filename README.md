@@ -3,10 +3,10 @@
 **StoreIt** is a modern file storage and sharing web app built with **Next.js**, **TypeScript**, and **Appwrite**.  
 It allows users to securely **upload**, **manage**, and **share files** through a simple, elegant, and responsive interface.
 
-[🌐 Live Demo](store-it-git-main-leoandradejs-projects.vercel.app)  
+[🌐 Live Demo](store-it-git-main-leoandradejs-projects.vercel.app/)  
 [👨🏻‍💻 Author](https://github.com/leoandradej)
 
-![StoreIt Preview](public/preview.png)
+![StoreIt Preview](./public/preview.png)
 
 ---
 
